@@ -76,7 +76,7 @@ header
 				display: inline-block
 				line-height: 24px
 				&:nth-child(2)
-					border-bottom: 1px dashed #000
+					border-bottom: 2px dotted #000000
 	.mid-content
 		text-align: center
 		padding: 170px 0 220px 0
@@ -85,7 +85,7 @@ header
 		h3
 			display: block
 			&:nth-child(2)
-				border-bottom: 2px solid #000
+				text-decoration: underline
 input.btn
 	background-color: #fff400
 	text-transform: uppercase
@@ -108,6 +108,10 @@ input.btn
 	left: 0px
 	right: 0px
 	z-index: 1
+	.item
+		width: 100%
+		img
+			object-fit: cover
 	.slick-dots
 		bottom: 20px
 		li
@@ -284,9 +288,11 @@ section
 		display: flex
 		flex-wrap: wrap
 		justify-content: space-around
+		margin-bottom: 50px
 		.item
 			position: relative
 			width: 300px
+			margin-bottom: 25px
 			&:hover .overlay
 				height: 100%
 				align-items: center
@@ -294,16 +300,314 @@ section
 				position: absolute
 				width: 100%
 				height: 30px
-				bottom: 0
+				bottom: 8px
 				color: #fff
 				background: rgba(0,0,0,.5)
 				transition: all .5s
 				display: flex
-
+				justify-content: center
 				&:hover
-					height: 100%
+					height: 95%
 					align-items: center
-				p
+				a
+					color: #fff
 					font-size: 14px
 					margin-bottom: 10px
+					cursor: pointer
+.catalog
+	background-image: url(../img/catalog.jpg)
+	background-size: cover
+	padding: 90px 0 105px 0
+	h3
+		color: #fff
+		font-size: 35px
+		line-height: 42px
+	form
+		width: 730px
+		margin: 0 auto
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-around
+		input, select
+			width: 350px
+			background: #ebebeb
+			border: none
+			outline: none
+			padding: 7px 10px
+			max-width: 350px
+			margin-bottom: 20px
+		input[type="button"]
+			background-color: #fff400
+
+.how-it-will-be
+	.ac-container
+		width: 	920px
+		margin: 0 auto
+		margin-bottom: 80px
+		border-bottom: 3px solid #d7d7d7
+
+	.ac-container label
+		font-family: $GPM
+		position: relative
+		//z-index: 20
+		display: flex
+		align-items: center
+		justify-content: flex-start
+		padding: 15px 20px
+		cursor: pointer
+		color: #000
+		line-height: 33px
+		font-size: 20px
+		text-transform: uppercase
+		background: #f2f2f2
+		transition: all 0.3s
+		border: 1px solid #d7d7d7
+		border-bottom: 3px solid #f2f2f2
+		&:after
+			content: ''
+			position: absolute
+			width: 24px
+			height: 24px
+			right: 13px
+			top: 18px
+			background: transparent url(../img/arrow_down.png) no-repeat center center
+.ac-container label:hover
+	background: #d7d7d7
+	border-bottom: 3px solid #ffff00
+
+//.ac-container label:hover:after,
+//.ac-container input:checked + label:hover:after
+//	content: ''
+//	position: absolute
+//	width: 24px
+//	height: 24px
+//	right: 13px
+//	top: 7px
+//	background: transparent url(../img/arrow_down.png) no-repeat center center
+
+.ac-container input:checked + label
+	&:after
+		content: ''
+		position: absolute
+		width: 24px
+		height: 24px
+		right: 13px
+		top: 18px
+		background: transparent url(../img/arrow_up.png) no-repeat center center
+
+.ac-container input
+	display: none
+
+.ac-container article
+	background: #fff
+	margin-top: -1px
+	overflow: hidden
+	height: 0px
+	position: relative
+	z-index: 10
+	transition: height 0.3s ease-in-out
+	border-left: 1px solid #d7d7d7
+	border-right: 1px solid #d7d7d7
+.ac-container input:checked ~ article
+	transition: height 0.5s ease-in-out, box-shadow 0.1s linear
+	border-top: 3px solid #ffff00
+
+.ac-container article p
+	text-align: left
+	font-style: $GPR
+	color: #000
+	line-height: 23px
+	font-size: 18px
+	padding: 20px
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.8)
+	margin-bottom: 25px
+.ac-container article a
+	font-family: $GPM
+	font-size: 18px
+	border-bottom: 2px dotted #000
+	margin-bottom: 25px
+	color: #000
+	&:hover
+		text-decoration: none
+.ac-container input:checked ~ article.ac-small
+	height: 140px
+
+.ac-container input:checked ~ article.ac-medium
+	height: 180px
+
+.ac-container input:checked ~ article.ac-large
+	height: 230px
+.how-much-coast
+	background-image: url(../img/coast.jpg)
+	background-size: cover
+	h3
+		color: #fff
+	.how-much-coast-flex
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-around
+		margin-bottom: 100px
+		.focus
+			&:hover
+				background: #fff400
+				h4,  p, span
+					color: #000
+		.item
+			width: 255px
+			height: 300px
+			padding: 40px 35px
+			background: rgba(0,0,0, .5)
+			border: 3px solid #fff400
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			transition: all .3s
+
+			&:last-child
+				background: none
+				border: none
+				display: flex
+				justify-content: space-between
+				padding: 0 0
+				.dot-item
+					padding: 0px 35px
+					background: rgba(0,0,0, .5)
+					height: 140px
+					border: 3px solid #fff400
+					display: flex
+					justify-content: space-between
+					align-items: center
+					img
+						margin-right: 10px
+				.focus
+					&:hover
+						background: #fff400
+						h4,  p, span
+							color: #000
+			h4
+				font-family: $BC
+				font-size: 25px
+				color: #fff
+				text-align: left
+				span
+					font-size: 18px
+					font-family: $GPM
+					color: #fff
+			p
+				margin: 0
+				font-family: $GPR
+				font-size: 14px
+				line-height: 16px
+				color: #fff
+				text-align: left
+			span
+				font-family: $BC
+				font-size: 40px
+				line-height: 42px
+				color: #fff400
+.why
+	.why-flex
+		width: 100%
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-around
+		.item
+			max-width: 555px
+			display: flex
+			justify-content: flex-start
+			align-items: flex-start
+			img 
+				width: 40px
+				height: 40px
+				background-color: #d2d2d2
+			.text
+				display: flex
+				flex-direction: column
+				align-items: flex-start
+			p
+				font-family: $GPR
+				font-size: 15px
+				line-height: 32px
+				margin-bottom: 0
+			h4
+				font-family: $GPB
+				font-size: 19px
+				line-height: 32px
+.sertificates
+	.carousel-sertif
+		max-width: 1500px
+		margin: 0 auto
+		padding-bottom: 30px
+		.slick-dots
+		bottom: 20px
+		li
+			.slick-active
+				color: #ffe807
+			button
+				&:before
+					font-size: 75px
+		.slick-arrow
+			z-index: 19
+			background-color: #fff400
+			width: 75px
+			height: 70px
+			transition: all .3s
+			cursor: pointer
+			border-bottom: 2px solid #ffc600
+			&:hover
+				box-shadow: 0 5px 5px rgba(0,0,0,.5)
+			&:active
+				box-shadow: inset 1px 1px 1px rgba(0,0,0, .5)
+		.slick-next
+			right: -100px
+			border-top-left-radius: 35px
+			border-bottom-left-radius: 35px
+			&:before
+				content: ">"
+				color: #000
+		.slick-prev
+			left: -100px
+			border-top-right-radius: 35px
+			border-bottom-right-radius: 35px
+			&:before
+				content: "<"
+				color: #000
+		.item
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-around
+			.sertif-wrap
+				padding: 25px 30px
+				background: rgba(0,0,0, .5)
+				border: 3px solid #fff400
+				&:nth-child(1), &:nth-child(6)
+					opacity: .5
+.design
+	background-image: url(../img/design.jpg)
+	background-size: cover
+	padding: 125px 0 125px 0
+	h3
+		color: #fff
+	form
+		margin: 0 auto
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-around
+		input, select
+			width: 350px
+			background: #ebebeb
+			border: none
+			outline: none
+			padding: 7px 10px
+			max-width: 350px
+			margin-bottom: 20px
+		input[type="button"]
+			background-color: #fff400
+.delivery
+	text-align: center
+	p
+		font-family: $GPM
+		font-size: 16px
+		line-height: 32px
+
 @import "media" // Всегда в конце

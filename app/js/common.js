@@ -9,5 +9,13 @@ $(document).ready(function(){
         // prevArrow: ,
         // nextArrow: ,
     });
-
+    $('.carousel-sertif').slick({
+        infinite: true,
+        slidesToShow: 1,
+        autoplay: true,
+        dots:true,
+        arrows:true
+        // prevArrow: ,
+        // nextArrow: ,
+    });
 });
