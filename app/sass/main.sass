@@ -46,6 +46,7 @@ h3
 	font-size: 30px
 	line-height: 36px
 	font-family: $GPM
+	z-index: 5
 h2
 	font-size: 84px
 	font-family: $BC
@@ -86,7 +87,7 @@ header
 			display: block
 			&:nth-child(2)
 				text-decoration: underline
-input.btn
+.btn
 	background-color: #fff400
 	text-transform: uppercase
 	padding: 10px 50px
@@ -161,12 +162,15 @@ section
 		line-height: 30px
 		display: block
 		margin-bottom: 70px
+		background-image: url(../img/bg.jpg)
+		position: relative
 .line
 	width: 100%
-	height: 2px
+	height: 3px
 	background: #ffff00
 	position: relative
 	top: 155px
+	z-index: 1
 .tour
 	padding-top: 100px
 	.tour-content
@@ -197,6 +201,11 @@ section
 						span
 							font-family: $GPB
 .how-it
+	.line
+		top: 80px
+	h3
+		background-image: url(../img/bg.jpg)
+		position: relative
 	p
 		margin-bottom: 85px
 	.video-wrap
@@ -217,13 +226,16 @@ section
 		line-height: 30px
 		font-family: $GPM
 	.line
-		top: 340px
+		top: 290px
 	.what-wont-flex
 		padding: 0 180px
 		display: flex
 		flex-wrap: wrap
 		justify-content: space-around
 		margin-bottom: 85px
+		position: relative
+		background-image: url(../img/bg.jpg)
+		z-index: 2
 		.item
 			width: 290px
 			display: flex
@@ -262,6 +274,11 @@ section
 		font-size: 35px
 		line-height: 42px
 .for-who
+	.line
+		top: 73px
+	h3 
+		position: relative
+		background-image: url(../img/bg.jpg)
 	ul
 		display: flex
 		justify-content: flex-start
@@ -279,6 +296,11 @@ section
 			line-height: 32px
 			font-family: $GPM
 .what-can-buy
+	.line
+		top: 75px
+	h3
+		position: relative
+		background-image: url(../img/bg.jpg)
 	p
 		font-family: $GPM
 		font-size: 22px
@@ -340,6 +362,11 @@ section
 			background-color: #fff400
 
 .how-it-will-be
+	.line
+		top: 94px
+	h3
+		position: relative
+		background-image: url(../img/bg.jpg)
 	.ac-container
 		width: 	920px
 		margin: 0 auto
@@ -371,87 +398,97 @@ section
 			right: 13px
 			top: 18px
 			background: transparent url(../img/arrow_down.png) no-repeat center center
-.ac-container label:hover
-	background: #d7d7d7
-	border-bottom: 3px solid #ffff00
+	.ac-container
+		label
+			&:hover
+				background: #d7d7d7
+				border-bottom: 3px solid #ffff00
 
-//.ac-container label:hover:after,
-//.ac-container input:checked + label:hover:after
-//	content: ''
-//	position: absolute
-//	width: 24px
-//	height: 24px
-//	right: 13px
-//	top: 7px
-//	background: transparent url(../img/arrow_down.png) no-repeat center center
+	//.ac-container label:hover:after,
+	//.ac-container input:checked + label:hover:after
+	//	content: ''
+	//	position: absolute
+	//	width: 24px
+	//	height: 24px
+	//	right: 13px
+	//	top: 7px
+	//	background: transparent url(../img/arrow_down.png) no-repeat center center
 
-.ac-container input:checked + label
-	&:after
-		content: ''
-		position: absolute
-		width: 24px
-		height: 24px
-		right: 13px
-		top: 18px
-		background: transparent url(../img/arrow_up.png) no-repeat center center
+	.ac-container input:checked + label
+		&:after
+			content: ''
+			position: absolute
+			width: 24px
+			height: 24px
+			right: 13px
+			top: 18px
+			background: transparent url(../img/arrow_up.png) no-repeat center center
 
-.ac-container input
-	display: none
+	.ac-container input
+		display: none
 
-.ac-container article
-	background: #fff
-	margin-top: -1px
-	overflow: hidden
-	height: 0px
-	position: relative
-	z-index: 10
-	transition: height 0.3s ease-in-out
-	border-left: 1px solid #d7d7d7
-	border-right: 1px solid #d7d7d7
-.ac-container input:checked ~ article
-	transition: height 0.5s ease-in-out, box-shadow 0.1s linear
-	border-top: 3px solid #ffff00
+	.ac-container article
+		background: #fff
+		margin-top: -1px
+		overflow: hidden
+		height: 0px
+		position: relative
+		z-index: 10
+		transition: height 0.3s ease-in-out
+		border-left: 1px solid #d7d7d7
+		border-right: 1px solid #d7d7d7
+	.ac-container input:checked ~ article
+		transition: height 0.5s ease-in-out, box-shadow 0.1s linear
+		border-top: 3px solid #ffff00
 
-.ac-container article p
-	text-align: left
-	font-style: $GPR
-	color: #000
-	line-height: 23px
-	font-size: 18px
-	padding: 20px
-	text-shadow: 1px 1px 1px rgba(255,255,255,0.8)
-	margin-bottom: 25px
-.ac-container article a
-	font-family: $GPM
-	font-size: 18px
-	border-bottom: 2px dotted #000
-	margin-bottom: 25px
-	color: #000
-	&:hover
-		text-decoration: none
-.ac-container input:checked ~ article.ac-small
-	height: 140px
+	.ac-container article p
+		text-align: left
+		font-style: $GPR
+		color: #000
+		line-height: 23px
+		font-size: 18px
+		padding: 20px
+		text-shadow: 1px 1px 1px rgba(255,255,255,0.8)
+		margin-bottom: 25px
+		background-image: none
+	.ac-container article a
+		font-family: $GPM
+		font-size: 18px
+		border-bottom: 2px dotted #000
+		margin-bottom: 25px
+		color: #000
+		&:hover
+			text-decoration: none
+	.ac-container input:checked ~ article.ac-small
+		height: 140px
 
-.ac-container input:checked ~ article.ac-medium
-	height: 180px
+	.ac-container input:checked ~ article.ac-medium
+		height: 180px
 
-.ac-container input:checked ~ article.ac-large
-	height: 230px
+	.ac-container input:checked ~ article.ac-large
+		height: 230px
 .how-much-coast
 	background-image: url(../img/coast.jpg)
 	background-size: cover
+	.line
+		top: 75px
 	h3
 		color: #fff
+		position: relative
+		background: #000
 	.how-much-coast-flex
 		display: flex
 		flex-wrap: wrap
 		justify-content: space-around
 		margin-bottom: 100px
+		h4, p, span
+			background: none
 		.focus
 			&:hover
 				background: #fff400
 				h4,  p, span
 					color: #000
+
 		.item
 			width: 255px
 			height: 300px
@@ -484,6 +521,7 @@ section
 						background: #fff400
 						h4,  p, span
 							color: #000
+
 			h4
 				font-family: $BC
 				font-size: 25px
@@ -506,6 +544,11 @@ section
 				line-height: 42px
 				color: #fff400
 .why
+	.line
+		top: 73px
+	h3 
+		position: relative
+		background-image: url(../img/bg.jpg)
 	.why-flex
 		width: 100%
 		display: flex
@@ -534,10 +577,16 @@ section
 				font-size: 19px
 				line-height: 32px
 .sertificates
+	.line
+		top: 70px
+	h3
+		position: relative
+		background-image: url(../img/bg.jpg)
 	.carousel-sertif
 		max-width: 1500px
 		margin: 0 auto
 		padding-bottom: 30px
+		padding-top: 50px
 		.slick-dots
 		bottom: 20px
 		li
@@ -604,10 +653,318 @@ section
 		input[type="button"]
 			background-color: #fff400
 .delivery
-	text-align: center
+	.line
+		top: 92px
+	h3
+		position: relative
+		background-image: url(../img/bg.jpg)
+		text-align: center
 	p
 		font-family: $GPM
 		font-size: 16px
 		line-height: 32px
+.map
+	background-image: url(../img/map.jpg)
+	background-size: cover
+	padding-top: 370px
+.calculation
+	background-image: url(../img/calculation.jpg)
+	background-size: cover
+	padding-top: 105px
+	h3
+		font-family: $BC
+		font-size: 35px
+		line-height: 42px
+		color: #fff
+	p
+		background: none
+		font-family: $GPM
+		font-size: 20px
+		line-height: 32px
+		color: #fff
+	form
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-around
+		margin-bottom: 150px
+		padding: 0 150px
+		input
+			width: 360px
+			border: 1px solid #fff400
+			&:hover
+				background: none
+				color: #fff400
+.faq
+	padding-bottom: 60px
+	.line
+		top: 70px
+	h3
+		position: relative
+		background-image: url(../img/bg.jpg)
+	a
+		font-family: $GPB
+		font-size: 18px
+		text-transform: uppercase
+		border-bottom: 2px dotted #000000
+		position: relative
+		color: #000
+	.af-container
+		width: 	920px
+		margin: 0 auto
+		margin-bottom: 30px
+		border-bottom: 3px solid #d7d7d7
 
+	.af-container
+		label
+			font-family: $GPM
+			position: relative
+			//z-index: 20
+			display: flex
+			align-items: center
+			justify-content: flex-start
+			padding: 15px 20px
+			cursor: pointer
+			color: #000
+			line-height: 33px
+			font-size: 20px
+			text-transform: uppercase
+			background: #f2f2f2
+			transition: all 0.3s
+			border: 1px solid #d7d7d7
+			border-bottom: 3px solid #f2f2f2
+			text-align: left
+			&:after
+				content: ''
+				position: absolute
+				width: 24px
+				height: 24px
+				right: 13px
+				top: 18px
+				background: transparent url(../img/arrow_down.png) no-repeat center center
+	.af-container
+		label
+			&:hover
+				background: #d7d7d7
+				border-bottom: 3px solid #ffff00
+
+	//.ac-container label:hover:after,
+	//.ac-container input:checked + label:hover:after
+	//	content: ''
+	//	position: absolute
+	//	width: 24px
+	//	height: 24px
+	//	right: 13px
+	//	top: 7px
+	//	background: transparent url(../img/arrow_down.png) no-repeat center center
+
+	.af-container input:checked + label
+		&:after
+			content: ''
+			position: absolute
+			width: 24px
+			height: 24px
+			right: 13px
+			top: 18px
+			background: transparent url(../img/arrow_up.png) no-repeat center center
+
+	.af-container input
+		display: none
+
+	.af-container article
+		background: #fff
+		margin-top: -1px
+		overflow: hidden
+		height: 0px
+		position: relative
+		z-index: 10
+		transition: height 0.3s ease-in-out
+		border-left: 1px solid #d7d7d7
+		border-right: 1px solid #d7d7d7
+	.af-container input:checked ~ article
+		transition: height 0.5s ease-in-out, box-shadow 0.1s linear
+		border-top: 3px solid #ffff00
+
+	.af-container article p
+		text-align: left
+		font-style: $GPR
+		color: #000
+		line-height: 23px
+		font-size: 18px
+		padding: 20px
+		text-shadow: 1px 1px 1px rgba(255,255,255,0.8)
+		margin-bottom: 25px
+		background-image: none
+	.af-container article a
+		font-family: $GPM
+		font-size: 18px
+		border-bottom: 2px dotted #000
+		margin-bottom: 25px
+		color: #000
+		&:hover
+			text-decoration: none
+	.af-container input:checked ~ article.af-small
+		height: 140px
+
+	.af-container input:checked ~ article.af-medium
+		height: 180px
+
+	.ac-container input:checked ~ article.af-large
+		height: 230px
+.questions
+	padding-bottom: 30px
+	.line
+		top: 87px
+	h3
+		position: relative
+		background-image: url(../img/bg.jpg)
+	p
+		font-family: $GPM
+		font-size: 24px
+		margin-bottom: 20px
+
+	form
+		max-width: 850px
+		margin: 0 auto
+		display: flex
+		justify-content: space-around
+		flex-direction: column
+		flex-wrap: wrap
+		align-items: flex-start
+		input
+			width: 100%
+			background-color: #ebebeb
+			border: 1px solid #7e7e7e
+			padding: 5px 10px
+			&::placeholder
+				font-family: $GPI
+				font-size: 18px
+		label
+			width: 100%
+			text-align: left
+			font-family: $GPM
+			font-size: 22px
+			margin-bottom: 5px
+
+.present
+	padding: 20px 0 10px 0px
+	.present-flex
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-around
+		padding: 0 125px
+		margin-bottom: 30px
+		.item
+			width: 255px
+			background-color: #fff
+			display: flex
+			justify-content: space-around
+			flex-direction: column
+			align-items: center
+			padding: 30px 30px
+			p
+				background: none
+				margin-bottom: 10px
+				text-align: left
+				font-size: 14px
+				font-family: $GPR
+				align-self: flex-start
+			span
+				font-family: $GPM
+				font-size: 14px
+				text-transform: uppercase
+			label
+				display: block
+				border: 2px solid #fff400
+				width: 80%
+				padding: 0px 15px
+			input[type="radio"]
+				display: none
+				&:checked + label
+					background: none
+			img
+				margin-bottom: 10px
+.more-questions
+	background-image: url(../img/more-questions.jpg)
+	background-size: cover
+	padding: 80px 0 40px 0
+	h3
+		color: #fff
+	.more-questions-flex
+		display: flex
+		justify-content: space-around
+		.text
+			display: flex
+			justify-content: space-between
+			flex-direction: column
+			align-items: flex-start
+			padding: 10px 20px
+			p, span 
+				margin-bottom: 0
+				text-align: left
+				background: none
+				color: #fff
+				font-family: $GPM
+				font-size: 20px
+			span
+				font-family: $GPI
+			input[type="button"]
+				border: 3px solid #ffff00
+				&:hover
+					background: none
+					color: #fff400
+footer
+	background-color: #323232
+	padding: 50px 0 220px 0
+	.footer-flex
+		display: flex
+		justify-content: space-around
+		flex-wrap: wrap
+		color: #808080
+		.item
+			display: flex
+			flex-direction: column
+			justify-content: flex-start
+			align-items: flex-start
+			h3
+				margin-bottom: 45px
+				font-family: $GPR
+				font-size: 36px
+				line-height: 30px
+			a
+				color: #808080
+			p
+				font-family: $GPR
+				font-size: 18px
+				line-height: 30px
+			.tel
+				margin-bottom: 40px
+				margin-left: 40px
+				position: relative
+				&:before
+					content: ""
+					position: absolute
+					width: 38px
+					height: 38px
+					background: url("../img/ico-tel.png")
+					left: -40px
+					top: -5px
+			.mail
+				position: relative
+				margin-left: 40px
+				&:before
+					content: ""
+					position: absolute
+					width: 38px
+					height: 38px
+					background: url("../img/ico-mail.png")
+					left: -40px
+					top: -5px
+		.center
+			align-items: center
+			h3
+				margin-bottom: 15px
+			p
+				text-align: center
+			img
+				margin-bottom: 20px
 @import "media" // Всегда в конце
