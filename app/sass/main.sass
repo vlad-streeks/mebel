@@ -31,7 +31,7 @@ html, body
 	background-image: url(../img/bg.jpg)
 body
 	font-size: 16px
-	min-width: 320px
+
 	position: relative
 	line-height: 1.75
 	font-family: $default-font
@@ -42,10 +42,11 @@ body
 	display: block
 	max-width: 100%
 	height: auto
+
 h3
 	font-size: 30px
 	line-height: 36px
-	font-family: $GPM
+	font-family: $GPMI
 	z-index: 5
 h2
 	font-size: 84px
@@ -57,6 +58,8 @@ header
 	position: relative
 	z-index: 9
 	background-color: inherit
+	width: 92%
+	margin: 0 auto
 	.top-content
 		display: flex
 		justify-content: space-between
@@ -69,11 +72,13 @@ header
 		.social
 			display: flex
 			justify-content: center
+			a
+				margin: 3px
 		.contacts
 			text-align: center
 			p
 				font-size: 24px
-				font-face: GothaProBol
+				font-family: $GPB
 				display: inline-block
 				line-height: 24px
 				&:nth-child(2)
@@ -164,6 +169,7 @@ section
 		margin-bottom: 70px
 		background-image: url(../img/bg.jpg)
 		position: relative
+		z-index: 2
 .line
 	width: 100%
 	height: 3px
@@ -186,9 +192,10 @@ section
 			flex-wrap: wrap
 			justify-content: space-between
 			margin-bottom: 50px
+			padding: 0 50px
 			.column
 				display: flex
-				max-width: 540px
+				max-width: 480px
 				padding: 0 30px
 				ul
 					li
@@ -246,6 +253,7 @@ section
 				margin-bottom: 0px
 				font-size: 18px
 				font-family: $GPM
+				text-align: left
 			img
 				margin-right: 5px
 .more-info
@@ -333,7 +341,8 @@ section
 					align-items: center
 				a
 					color: #fff
-					font-size: 14px
+					font-family: $GPR
+					font-size: 18px
 					margin-bottom: 10px
 					cursor: pointer
 .catalog
@@ -368,7 +377,7 @@ section
 		position: relative
 		background-image: url(../img/bg.jpg)
 	.ac-container
-		width: 	920px
+		width: 	80%
 		margin: 0 auto
 		margin-bottom: 80px
 		border-bottom: 3px solid #d7d7d7
@@ -443,7 +452,7 @@ section
 
 	.ac-container article p
 		text-align: left
-		font-style: $GPR
+		font-family: $GPR
 		color: #000
 		line-height: 23px
 		font-size: 18px
@@ -518,9 +527,12 @@ section
 						margin-right: 10px
 				.focus
 					&:hover
+						cursor: pointer
 						background: #fff400
 						h4,  p, span
 							color: #000
+						img
+							display: none
 
 			h4
 				font-family: $BC
@@ -550,6 +562,7 @@ section
 		position: relative
 		background-image: url(../img/bg.jpg)
 	.why-flex
+		padding: 30px 0
 		width: 100%
 		display: flex
 		flex-wrap: wrap
@@ -559,10 +572,9 @@ section
 			display: flex
 			justify-content: flex-start
 			align-items: flex-start
+			margin-bottom: 30px
 			img 
-				width: 40px
-				height: 40px
-				background-color: #d2d2d2
+				margin-right: 10px
 			.text
 				display: flex
 				flex-direction: column
@@ -572,10 +584,14 @@ section
 				font-size: 15px
 				line-height: 32px
 				margin-bottom: 0
+				text-align: left
+
 			h4
-				font-family: $GPB
+				font-family: $GPBo
 				font-size: 19px
 				line-height: 32px
+				text-align: left
+				text-transform: uppercase
 .sertificates
 	.line
 		top: 70px
@@ -583,12 +599,13 @@ section
 		position: relative
 		background-image: url(../img/bg.jpg)
 	.carousel-sertif
-		max-width: 1500px
+		max-width: 1170px
 		margin: 0 auto
-		padding-bottom: 30px
-		padding-top: 50px
+
+		padding: 50px 50px 30px 50px
 		.slick-dots
-		bottom: 20px
+			position: relative
+
 		li
 			.slick-active
 				color: #ffe807
@@ -608,14 +625,14 @@ section
 			&:active
 				box-shadow: inset 1px 1px 1px rgba(0,0,0, .5)
 		.slick-next
-			right: -100px
+			right: 0px
 			border-top-left-radius: 35px
 			border-bottom-left-radius: 35px
 			&:before
 				content: ">"
 				color: #000
 		.slick-prev
-			left: -100px
+			left: 0px
 			border-top-right-radius: 35px
 			border-bottom-right-radius: 35px
 			&:before
@@ -629,7 +646,7 @@ section
 				padding: 25px 30px
 				background: rgba(0,0,0, .5)
 				border: 3px solid #fff400
-				&:nth-child(1), &:nth-child(6)
+				&:nth-child(1), &:nth-child(4)
 					opacity: .5
 .design
 	background-image: url(../img/design.jpg)
@@ -647,7 +664,7 @@ section
 			background: #ebebeb
 			border: none
 			outline: none
-			padding: 7px 10px
+			padding: 18px 10px
 			max-width: 350px
 			margin-bottom: 20px
 		input[type="button"]
@@ -666,7 +683,7 @@ section
 .map
 	background-image: url(../img/map.jpg)
 	background-size: cover
-	padding-top: 370px
+	padding-top: 383px
 .calculation
 	background-image: url(../img/calculation.jpg)
 	background-size: cover
@@ -709,7 +726,7 @@ section
 		position: relative
 		color: #000
 	.af-container
-		width: 	920px
+		width: 	80%
 		margin: 0 auto
 		margin-bottom: 30px
 		border-bottom: 3px solid #d7d7d7
@@ -834,7 +851,7 @@ section
 			width: 100%
 			background-color: #ebebeb
 			border: 1px solid #7e7e7e
-			padding: 5px 10px
+			padding: 18px 10px
 			&::placeholder
 				font-family: $GPI
 				font-size: 18px
@@ -967,4 +984,312 @@ footer
 				text-align: center
 			img
 				margin-bottom: 20px
+
+
+
+
+//				MODAL
+#overlay
+	z-index: 99
+	position: fixed
+	background-color: #000
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	display: none
+
+#modal_form1, #modal_form2
+	position: fixed
+	z-index: 999
+	padding: 50px 60px 20px 60px
+	border: 3px solid #ffed00
+	top: 10%
+	left: 50%
+	margin-left: -240px
+	background-color: #fff
+	display: flex
+	flex-direction: column
+	justify-content: center
+	text-align: center
+	form
+		width: 350px
+		display: flex
+		flex-direction: column
+		align-items: center
+		input, textarea
+			width: 100%
+			margin-bottom: 30px
+			background: #ebebeb
+			border: none
+			outline: none
+			padding: 18px 10px
+		textarea
+			height: 140px
+	h2
+		font-size: 28px
+		font-weight: 700
+		line-height: 35px
+		text-transform: uppercase
+		margin: 0
+		padding: 60px 0 45px 0
+		background-color: #f3f3f3
+	p
+		font-size: 16px
+		text-transform: uppercase
+		line-height: 1.5
+		margin-top: 25px
+		margin-bottom: 35px
+	input
+
+	.btn
+		background-color: #ffed00
+		color: #000
+		width: 352px
+		height:  72px
+		border-radius: 42px
+		border: none
+		outline: none
+		font-size: 20px
+		&:hover
+			cursor: pointer
+			box-shadow: 0px 5px 7px 1px rgba(0,0,0,0.75)
+			transition: 0.3s
+
+#modal_form3
+	position: fixed
+	z-index: 100
+	width: 650px
+	border: 3px solid #ffed00
+	top: 10%
+	left: 50%
+	margin-left: -325px
+	background-color: #fff
+	display: flex
+	flex-direction: column
+	justify-content: center
+	text-align: center
+	z-index: 9999999
+	h2
+		font-size: 28px
+		font-weight: 700
+		line-height: 35px
+		text-transform: uppercase
+		margin: 0
+		padding: 60px 0 45px 0
+		background-color: #f3f3f3
+	p
+		font-size: 16px
+		text-transform: uppercase
+		line-height: 1.5
+		margin-top: 25px
+		margin-bottom: 35px
+	.btn
+		background-color: #ffed00
+		color: #000
+		width: 352px
+		height:  72px
+		border-radius: 42px
+		border: none
+		outline: none
+		font-size: 20px
+		&:hover
+			cursor: pointer
+			box-shadow: 0px 5px 7px 1px rgba(0,0,0,0.75)
+			transition: 0.3s
+	.messenger
+		text-align: center
+		padding: 30px 0
+		a
+			color: #000
+
+
+
+#modal_form4
+	position: fixed
+	z-index: 100
+	width: 850px
+	border: 3px solid #ffed00
+	top: 2%
+	left: 50%
+	margin-left: -425px
+	background-color: #fff
+	display: flex
+	flex-direction: column
+	justify-content: center
+	text-align: center
+	padding-bottom: 20px
+	.logo
+		text-align: center
+	h2
+		font-size: 28px
+		line-height: 35px
+		text-transform: uppercase
+		margin: 0
+		padding: 60px 0 45px 0
+		background-color: #f3f3f3
+	ul
+		padding: 0 65px 0 100px
+		li
+			font-size: 16px
+			text-transform: uppercase
+			text-align: left
+			list-style: none
+			padding: 15px 0 10px 0
+			position: relative
+			list-style-image: url("../img/list-ico.png")
+
+	a.dot
+		font-size: 16px
+		text-transform: uppercase
+		color: #000
+		text-decoration: none
+		border-bottom: 1px dashed #000
+		margin-bottom: 30px
+
+
+
+
+
+#modal_form5
+	position: fixed
+	z-index: 100
+	width: 850px
+	height: 640px
+	border: 3px solid #ffed00
+	top: 10%
+	left: 50%
+	margin-left: -425px
+	background-color: #fff
+	padding: 80px 30px 30px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	text-align: center
+	.logo
+		text-align: center
+	h2
+		font-size: 22px
+		font-weight: 700
+		line-height: 35px
+		text-transform: uppercase
+		margin-bottom: 30px
+	h3
+		text-transform: uppercase
+		font-size: 16px
+		margin-bottom: 30px
+	p
+		font-size: 16px
+		text-transform: uppercase
+		margin-bottom: 10px
+		margin-top: 20px
+	a.dot
+		font-size: 16px
+		text-transform: uppercase
+		color: #000
+		text-decoration: none
+		border-bottom: 1px dashed #000
+		margin-bottom: 30px
+
+#modal_form6
+	position: fixed
+	z-index: 100
+	width: 850px
+	border: 3px solid #ffed00
+	top: 10%
+	left: 50%
+	margin-left: -425px
+	background-color: #fff
+	padding: 75px 70px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	text-align: center
+	h2
+		font-size: 22px
+		font-weight: 700
+		line-height: 35px
+		text-transform: uppercase
+		margin-bottom: 30px
+	.modal6-flex
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-around
+		.item
+			width: 290px
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			img
+				margin-right: 5px
+			p
+				font-size: 14px
+				line-height: 16px
+				text-transform: uppercase
+				margin-bottom: 10px
+				margin-top: 20px
+				text-align: left
+
+#modal_form7
+	position: fixed
+	z-index: 100
+	width: 965px
+	border: 3px solid #ffed00
+	top: 10%
+	left: 50%
+	margin-left: -482px
+	background-color: #fff
+	padding: 75px 70px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	text-align: center
+	h2
+		font-size: 22px
+		font-weight: 700
+		line-height: 35px
+		text-transform: uppercase
+		margin-bottom: 30px
+	.modal_carousel
+		margin-bottom: 30px
+		.slick-arrow
+			z-index: 19
+			background-color: #fff400
+			width: 75px
+			height: 70px
+			transition: all .3s
+			cursor: pointer
+			border-bottom: 2px solid #ffc600
+			&:hover
+				box-shadow: 0 5px 5px rgba(0,0,0,.5)
+			&:active
+				box-shadow: inset 1px 1px 1px rgba(0,0,0, .5)
+		.slick-next
+			right: -148px
+			border-top-right-radius: 35px
+			border-bottom-right-radius: 35px
+			&:before
+				content: ">"
+				color: #000
+		.slick-prev
+			left: -148px
+			border-top-left-radius: 35px
+			border-bottom-left-radius: 35px
+			&:before
+				content: "<"
+				color: #000
+
+#modal_close1,#modal_close2,#modal_close3,#modal_close4,#modal_close5,#modal_close6,#modal_close7
+	position: absolute
+	top: 5px
+	right: -60px
+	border-radius: 50%
+	background: url(../img/ico_close.png) no-repeat center
+	background-size: 60%
+	display: block
+	width: 45px
+	height: 45px
+	background-color: #ffed00
+	cursor: pointer
+
 @import "media" // Всегда в конце
